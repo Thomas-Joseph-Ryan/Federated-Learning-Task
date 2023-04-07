@@ -9,6 +9,7 @@ import signal
 import queue
 import time
 import random
+import base64
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s [%(levelname)s] %(message)s')
 
@@ -20,55 +21,11 @@ inbound_information = queue.Queue()
 
 SUB_CLIENT_NUMBER = 2
 
-
-def aggregate_models(client_models: list[tuple[MultinominalLogisticRegression, int]], 
-                     global_model: MultinominalLogisticRegression,
-                     sub_client: int) -> MultinominalLogisticRegression:
-    if sub_client == 0 or len(client_models) < SUB_CLIENT_NUMBER:
-        num_clients = len(client_models)
-
-        # Initialize the aggregated weights and biases to zero
-        aggregated_weights = torch.zeros_like(client_models[0][0].linear.weight)
-        aggregated_biases = torch.zeros_like(client_models[0][0].linear.bias)
-
-        # Sum the weights and biases from all client models
-        for model in client_models:
-            aggregated_weights += model[0].linear.weight
-            aggregated_biases += model[0].linear.bias
-
-        # Calculate the average of the weights and biases
-        aggregated_weights /= num_clients
-        aggregated_biases /= num_clients
-
-        # Update the global model with the averaged weights and biases
-        global_model.linear.weight.data = aggregated_weights
-        global_model.linear.bias.data = aggregated_biases
-
-    elif sub_client == 1 and len(client_models) >= SUB_CLIENT_NUMBER:
-        num_clients = SUB_CLIENT_NUMBER
-
-        # Initialize the aggregated weights and biases to zero
-        aggregated_weights = torch.zeros_like(client_models[0][0].linear.weight)
-        aggregated_biases = torch.zeros_like(client_models[0][0].linear.bias)
-
-        # Choose 2 client models at random
-        selected_client_models = random.sample(client_models, num_clients)
-        # Sum the weights and biases from all client models
-        for model in selected_client_models:
-            aggregated_weights += model[0].linear.weight
-            aggregated_biases += model[0].linear.bias
-
-        # Calculate the average of the weights and biases
-        aggregated_weights /= num_clients
-        aggregated_biases /= num_clients
-
-        # Update the global model with the averaged weights and biases
-        global_model.linear.weight.data = aggregated_weights
-        global_model.linear.bias.data = aggregated_biases
-    return global_model
+HEADER_FORMAT = "{type}:{length}:"
+HEADER_SIZE = 40  # Choose a fixed size for the header
 
 
-def start():
+def main():
     if len(sys.argv) != 3:
         print("Usage: python COMP3221_FLServer.py <Port-Server> <Sub-client>")
         sys.exit(1)
@@ -164,6 +121,51 @@ def start():
         print("Broadcasting new global model\n")
         broadcast_model(global_model)
         
+def aggregate_models(client_models: list[tuple[MultinominalLogisticRegression, int]], 
+                     global_model: MultinominalLogisticRegression,
+                     sub_client: int) -> MultinominalLogisticRegression:
+    if sub_client == 0 or len(client_models) < SUB_CLIENT_NUMBER:
+        num_clients = len(client_models)
+
+        # Initialize the aggregated weights and biases to zero
+        aggregated_weights = torch.zeros_like(client_models[0][0].linear.weight)
+        aggregated_biases = torch.zeros_like(client_models[0][0].linear.bias)
+
+        # Sum the weights and biases from all client models
+        for model in client_models:
+            aggregated_weights += model[0].linear.weight
+            aggregated_biases += model[0].linear.bias
+
+        # Calculate the average of the weights and biases
+        aggregated_weights /= num_clients
+        aggregated_biases /= num_clients
+
+        # Update the global model with the averaged weights and biases
+        global_model.linear.weight.data = aggregated_weights
+        global_model.linear.bias.data = aggregated_biases
+
+    elif sub_client == 1 and len(client_models) >= SUB_CLIENT_NUMBER:
+        num_clients = SUB_CLIENT_NUMBER
+
+        # Initialize the aggregated weights and biases to zero
+        aggregated_weights = torch.zeros_like(client_models[0][0].linear.weight)
+        aggregated_biases = torch.zeros_like(client_models[0][0].linear.bias)
+
+        # Choose 2 client models at random
+        selected_client_models = random.sample(client_models, num_clients)
+        # Sum the weights and biases from all client models
+        for model in selected_client_models:
+            aggregated_weights += model[0].linear.weight
+            aggregated_biases += model[0].linear.bias
+
+        # Calculate the average of the weights and biases
+        aggregated_weights /= num_clients
+        aggregated_biases /= num_clients
+
+        # Update the global model with the averaged weights and biases
+        global_model.linear.weight.data = aggregated_weights
+        global_model.linear.bias.data = aggregated_biases
+    return global_model
 
 def thread_listen(port: int):
     try:
@@ -183,19 +185,26 @@ def thread_listen(port: int):
                 with conn:
                     logging.info(f"Connected by {client_port}")
 
-                    while True:
-                        data = conn.recv(1024)
-                        if not data:
-                            break
+                    header = conn.recv(HEADER_SIZE).decode('utf-8').strip()
+                    data_type, data_length = header.split(':')
+                    data_length = int(data_length)
 
-                        data = data.decode('utf-8')
-                        logging.debug(f"Recieved data: {data}")
-                        inbound_information.put((data, client_port))
+                    encoded_data = conn.recv(data_length)
+                    if data_type == "pickle":
+                        decoded_data = base64.b64decode(encoded_data)
+                    elif data_type == "string":
+                        decoded_data = encoded_data.decode('utf-8')
+                    else:
+                        raise ValueError("Invalid data type")
+                        
+                    logging.debug(f"Recieved data: {decoded_data}")
+                    inbound_information.put((decoded_data, client_port))
     except Exception as e:
         logging.error(f"Exception in server listening")
 
 def broadcast_model(model : MultinominalLogisticRegression):
     data = model.serialize()
+    data = base64.b64encode(data)
     for client in clients:
         client_port : int = client
         client_data = clients[client_port]
@@ -204,7 +213,8 @@ def broadcast_model(model : MultinominalLogisticRegression):
             with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
                 logging.info(f"Trying to connect to {client_id} on port {client_port}")
                 s.connect(('localhost', client_port))
-                s.sendall(data)
+                header = HEADER_FORMAT.format(type="pickle", length=len(data)).encode('utf-8').ljust(HEADER_SIZE)
+                s.sendall(header + data)
         except ConnectionRefusedError:
             logging.error(f"Connection was refused by {client_id} on port {client_port}")
         except Exception as e:
@@ -228,4 +238,4 @@ def quit_gracefully(signum, frame) -> None:
 if __name__ == "__main__":
     signal.signal(signal.SIGINT, quit_gracefully)
     signal.signal(signal.SIGTERM, quit_gracefully)
-    start()
+    main()

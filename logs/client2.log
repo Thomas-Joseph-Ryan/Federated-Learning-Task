@@ -1,0 +1,5 @@
+2023-04-10 09:36:38,166 - INFO - Trying to connect to server on port 6000
+2023-04-10 09:36:38,170 - INFO - Sending handshake
+2023-04-10 09:36:38,170 - INFO - Listening on port 6002
+2023-04-10 09:37:35,630 - INFO - Connected by 49900
+2023-04-10 09:37:35,630 - DEBUG - Recieved data: end

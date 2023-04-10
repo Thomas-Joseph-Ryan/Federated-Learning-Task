@@ -21,8 +21,10 @@ inbound_information = queue.Queue()
 
 SUB_CLIENT_NUMBER = 2
 
-HEADER_FORMAT = "{type}:{length}:"
+HEADER_FORMAT = "{type}:{length}:{port}"
 HEADER_SIZE = 40  # Choose a fixed size for the header
+
+SERVER_PORT = 6000
 
 
 def main():
@@ -51,15 +53,13 @@ def main():
     file_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
     logger = logging.getLogger()
     logger.addHandler(file_handler)
-    # Disable the StreamHandler that is attached to the root logger by default
     for handler in logger.handlers:
         if isinstance(handler, logging.StreamHandler):
             logger.removeHandler(handler)
 
-    # The arguments are valid; you can now start the federated learning server
+    # SERVER
     logging.info(f"Starting server on port {port_server} with sub-client flag {sub_client}...")
     
-    # Your server implementation goes here
     input_size = 28 * 28  # for 28x28 pixel images
     num_classes = 10  # for digits 0 to 9
     global_model = MultinominalLogisticRegression(input_size, num_classes)
@@ -69,17 +69,27 @@ def main():
 
     while True:
         # Wait indefinately for client to join
-        inbound_info = inbound_information.get(block=True)
-        message, client_port = inbound_info[0], inbound_info[1]
-        if message.split(" ")[0] == "hello":
-            add_client(message, client_port)
-        else: 
+        try:
+            inbound_info = inbound_information.get(block=True, timeout=0.5)
+        except queue.Empty:
+            check_stop_event()
+            continue
+        message, client_port, data_type = inbound_info[0], inbound_info[1], inbound_info[2]
+        logging.info(f"Message recieved from client {message}, {client_port}, {data_type}")
+        if data_type == "string":
+            if message.split(" ")[0] == "hello":
+                logging.info(f"New client added {message}")
+                add_client(message, client_port)
+            else: 
+                continue
+        else:
             continue
 
         # Once a single client joins, 30 second timer begins
         start_time = time.time()
         timeout = 30  
         while True:
+            check_stop_event()
             current_time = time.time()
             elapsed_time = current_time - start_time
 
@@ -103,10 +113,15 @@ def main():
         num_clients = len(clients)
         print(f"Total Number of clients: {num_clients}")
         while True:
-            inbound_info = inbound_information.get(block=True)
-            message, client_port = inbound_info[0], inbound_info[1]
-            if message.split(" ")[0] == "hello":
-                add_client(message, client_port)
+            try:
+                inbound_info = inbound_information.get(block=True, timeout=0.5)
+            except queue.Empty:
+                check_stop_event()
+                continue
+            message, client_port, data_type = inbound_info[0], inbound_info[1], inbound_info[2]
+            if data_type == "string":
+                if message.split(" ")[0] == "hello":
+                    add_client(message, client_port)
             else:
                 client_data = clients[client_port]
                 client_id = client_data["id"]
@@ -120,6 +135,7 @@ def main():
         global_model = aggregate_models(iteration_data, global_model, sub_client)
         print("Broadcasting new global model\n")
         broadcast_model(global_model)
+    broadcast_end()
         
 def aggregate_models(client_models: list[tuple[MultinominalLogisticRegression, int]], 
                      global_model: MultinominalLogisticRegression,
@@ -181,26 +197,39 @@ def thread_listen(port: int):
                     conn, (client_addr, client_port) = s.accept()
                 except socket.timeout:
                     continue
+                except Exception as e:
+                    logging.error(f"Exception when accepting client: {e}")
+                    continue
 
                 with conn:
                     logging.info(f"Connected by {client_port}")
 
-                    header = conn.recv(HEADER_SIZE).decode('utf-8').strip()
-                    data_type, data_length = header.split(':')
-                    data_length = int(data_length)
+                    try:
+                        header = conn.recv(HEADER_SIZE).decode('utf-8').strip()
+                        logging.debug(f"Header: {header}")
+                        data_type, data_length, client_port = header.split(':')
+                        data_length = int(data_length)
+                        client_port = int(client_port)
+                    except Exception as e:
+                        logging.error(f"Exception while processing header: {e}")
+                        continue
 
-                    encoded_data = conn.recv(data_length)
-                    if data_type == "pickle":
-                        decoded_data = base64.b64decode(encoded_data)
-                    elif data_type == "string":
-                        decoded_data = encoded_data.decode('utf-8')
-                    else:
-                        raise ValueError("Invalid data type")
+                    try:
+                        encoded_data = conn.recv(data_length)
+                        if data_type == "pickle":
+                            decoded_data = base64.b64decode(encoded_data)
+                        elif data_type == "string":
+                            decoded_data = encoded_data.decode('utf-8')
+                        else:
+                            raise ValueError("Invalid data type")
+                    except Exception as e:
+                        logging.error(f"Exception while processing data: {e}")
+                        continue
                         
                     logging.debug(f"Recieved data: {decoded_data}")
-                    inbound_information.put((decoded_data, client_port))
+                    inbound_information.put((decoded_data, client_port, data_type))
     except Exception as e:
-        logging.error(f"Exception in server listening")
+        logging.error(f"Exception in server listening: {e}")
 
 def broadcast_model(model : MultinominalLogisticRegression):
     data = model.serialize()
@@ -213,27 +242,51 @@ def broadcast_model(model : MultinominalLogisticRegression):
             with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
                 logging.info(f"Trying to connect to {client_id} on port {client_port}")
                 s.connect(('localhost', client_port))
-                header = HEADER_FORMAT.format(type="pickle", length=len(data)).encode('utf-8').ljust(HEADER_SIZE)
+                header = HEADER_FORMAT.format(type="pickle", length=len(data), port=SERVER_PORT).encode('utf-8').ljust(HEADER_SIZE)
                 s.sendall(header + data)
         except ConnectionRefusedError:
             logging.error(f"Connection was refused by {client_id} on port {client_port}")
         except Exception as e:
             logging.error(f"Exception in broadcast: {e}")
 
-def add_client(hand_shake_message : str, port: str):
+def broadcast_end():
+    data = "end"
+    data = data.encode('utf-8')
+    for client in clients:
+        client_port : int = client
+        client_data = clients[client_port]
+        client_id = client_data["id"]
+        try:
+            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+                logging.info(f"Trying to connect to {client_id} on port {client_port} to end client process")
+                s.connect(('localhost', client_port))
+                header = HEADER_FORMAT.format(type="string", length=len(data), port=SERVER_PORT).encode('utf-8').ljust(HEADER_SIZE)
+                s.sendall(header + data)
+        except ConnectionRefusedError:
+            logging.error(f"Connection was refused by {client_id} on port {client_port}")
+        except Exception as e:
+            logging.error(f"Exception in broadcast: {e}")
+
+def add_client(hand_shake_message : str, client_port : int):
     '''
         Handshake message will be of the form
-        "hello <client_id> <data_size>" where data size is the number
+        "hello <client_id> <data_size> <client_listening_port>" where data size is the number
         of samples in the training data
     '''
     split_msg = hand_shake_message.split(" ")
-    clients[int(port)] = {"id": split_msg[1], "data_size": int(split_msg[2])}
+    clients[client_port] = {"id": split_msg[1], "data_size": int(split_msg[2])}
 
 
 def quit_gracefully(signum, frame) -> None:
     logging.info(f"Received signal {signum}, quitting gracefully...")
     stop_event.set()
+    broadcast_end()
     sys.exit(0)
+
+def check_stop_event():
+    if stop_event.is_set():
+        broadcast_end()
+        sys.exit(0)
 
 if __name__ == "__main__":
     signal.signal(signal.SIGINT, quit_gracefully)

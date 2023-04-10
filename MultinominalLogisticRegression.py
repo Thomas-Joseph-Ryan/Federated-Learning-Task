@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 import pickle
+import torch.nn.functional as F
 
 class MultinominalLogisticRegression(nn.Module):
     def __init__(self, input_size, num_classes):
@@ -8,8 +9,10 @@ class MultinominalLogisticRegression(nn.Module):
         self.linear = nn.Linear(input_size, num_classes)
 
     def forward(self, x):
+        x = torch.flatten(x, 1)
         x = self.linear(x)
-        return x
+        output = F.log_softmax(x, dim=1)
+        return output
     
     def serialize(self):
         model_data = {

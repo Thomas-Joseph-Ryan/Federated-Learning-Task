@@ -1,5 +1,8 @@
 # Federated learning Task
 
+I have not uploaded the FLdata in the submission to reduce package size, please insert the directory 
+FLdata from the assignment spec into the same directory of the program.
+
 In order to run the program, use the commands outlined in the spec.
 
 Ensure you start the server first, then the clients.

@@ -1,0 +1,1013 @@
+2023-04-11 13:46:50,381 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:46:50,400 - INFO - Sending handshake
+2023-04-11 13:46:50,400 - INFO - Listening on port 6001
+2023-04-11 13:47:20,412 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:47:20,413 - INFO - I am client1
+2023-04-11 13:47:20,416 - INFO - Receiving new global model
+2023-04-11 13:47:20,618 - INFO - Training loss: 2.46302
+2023-04-11 13:47:20,623 - INFO - Testing accuracy: 10.04%
+2023-04-11 13:47:20,626 - INFO - Local training..
+2023-04-11 13:47:23,360 - INFO - Sending new local model
+2023-04-11 13:47:23,361 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:47:23,363 - INFO - Sending local model
+2023-04-11 13:47:23,365 - INFO - Listening on port 6001
+2023-04-11 13:47:23,373 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:47:23,373 - INFO - I am client1
+2023-04-11 13:47:23,373 - INFO - Receiving new global model
+2023-04-11 13:47:23,498 - INFO - Training loss: 2.32911
+2023-04-11 13:47:23,498 - INFO - Testing accuracy: 5.71%
+2023-04-11 13:47:23,498 - INFO - Local training..
+2023-04-11 13:47:26,435 - INFO - Sending new local model
+2023-04-11 13:47:26,435 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:47:26,439 - INFO - Sending local model
+2023-04-11 13:47:26,441 - INFO - Listening on port 6001
+2023-04-11 13:47:26,448 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:47:26,448 - INFO - I am client1
+2023-04-11 13:47:26,448 - INFO - Receiving new global model
+2023-04-11 13:47:26,678 - INFO - Training loss: 1.12563
+2023-04-11 13:47:26,678 - INFO - Testing accuracy: 94.65%
+2023-04-11 13:47:26,680 - INFO - Local training..
+2023-04-11 13:47:29,492 - INFO - Sending new local model
+2023-04-11 13:47:29,493 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:47:29,495 - INFO - Sending local model
+2023-04-11 13:47:29,498 - INFO - Listening on port 6001
+2023-04-11 13:47:29,505 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:47:29,506 - INFO - I am client1
+2023-04-11 13:47:29,506 - INFO - Receiving new global model
+2023-04-11 13:47:29,612 - INFO - Training loss: 1.01582
+2023-04-11 13:47:29,612 - INFO - Testing accuracy: 94.51%
+2023-04-11 13:47:29,612 - INFO - Local training..
+2023-04-11 13:47:32,122 - INFO - Sending new local model
+2023-04-11 13:47:32,124 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:47:32,125 - INFO - Sending local model
+2023-04-11 13:47:32,128 - INFO - Listening on port 6001
+2023-04-11 13:47:32,136 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:47:32,136 - INFO - I am client1
+2023-04-11 13:47:32,137 - INFO - Receiving new global model
+2023-04-11 13:47:32,236 - INFO - Training loss: 1.87056
+2023-04-11 13:47:32,236 - INFO - Testing accuracy: 47.47%
+2023-04-11 13:47:32,240 - INFO - Local training..
+2023-04-11 13:47:34,508 - INFO - Sending new local model
+2023-04-11 13:47:34,509 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:47:34,510 - INFO - Sending local model
+2023-04-11 13:47:34,512 - INFO - Listening on port 6001
+2023-04-11 13:47:34,519 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:47:34,519 - INFO - I am client1
+2023-04-11 13:47:34,520 - INFO - Receiving new global model
+2023-04-11 13:47:34,612 - INFO - Training loss: 2.15782
+2023-04-11 13:47:34,614 - INFO - Testing accuracy: 27.38%
+2023-04-11 13:47:34,615 - INFO - Local training..
+2023-04-11 13:47:36,896 - INFO - Sending new local model
+2023-04-11 13:47:36,898 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:47:36,900 - INFO - Sending local model
+2023-04-11 13:47:36,901 - INFO - Listening on port 6001
+2023-04-11 13:47:36,907 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:47:36,908 - INFO - I am client1
+2023-04-11 13:47:36,908 - INFO - Receiving new global model
+2023-04-11 13:47:37,023 - INFO - Training loss: 2.00144
+2023-04-11 13:47:37,025 - INFO - Testing accuracy: 28.83%
+2023-04-11 13:47:37,025 - INFO - Local training..
+2023-04-11 13:47:39,495 - INFO - Sending new local model
+2023-04-11 13:47:39,497 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:47:39,498 - INFO - Sending local model
+2023-04-11 13:47:39,500 - INFO - Listening on port 6001
+2023-04-11 13:47:39,515 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:47:39,516 - INFO - I am client1
+2023-04-11 13:47:39,516 - INFO - Receiving new global model
+2023-04-11 13:47:39,605 - INFO - Training loss: 1.98220
+2023-04-11 13:47:39,605 - INFO - Testing accuracy: 32.88%
+2023-04-11 13:47:39,607 - INFO - Local training..
+2023-04-11 13:47:41,898 - INFO - Sending new local model
+2023-04-11 13:47:41,900 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:47:41,901 - INFO - Sending local model
+2023-04-11 13:47:41,903 - INFO - Listening on port 6001
+2023-04-11 13:47:41,909 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:47:41,909 - INFO - I am client1
+2023-04-11 13:47:41,910 - INFO - Receiving new global model
+2023-04-11 13:47:41,991 - INFO - Training loss: 1.98206
+2023-04-11 13:47:41,991 - INFO - Testing accuracy: 29.48%
+2023-04-11 13:47:41,994 - INFO - Local training..
+2023-04-11 13:47:44,161 - INFO - Sending new local model
+2023-04-11 13:47:44,161 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:47:44,164 - INFO - Sending local model
+2023-04-11 13:47:44,166 - INFO - Listening on port 6001
+2023-04-11 13:47:44,172 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:47:44,172 - INFO - I am client1
+2023-04-11 13:47:44,172 - INFO - Receiving new global model
+2023-04-11 13:47:44,407 - INFO - Training loss: 1.98496
+2023-04-11 13:47:44,407 - INFO - Testing accuracy: 34.10%
+2023-04-11 13:47:44,409 - INFO - Local training..
+2023-04-11 13:47:46,946 - INFO - Sending new local model
+2023-04-11 13:47:46,947 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:47:46,949 - INFO - Sending local model
+2023-04-11 13:47:46,951 - INFO - Listening on port 6001
+2023-04-11 13:47:46,962 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:47:46,962 - INFO - I am client1
+2023-04-11 13:47:46,962 - INFO - Receiving new global model
+2023-04-11 13:47:47,139 - INFO - Training loss: 2.25727
+2023-04-11 13:47:47,139 - INFO - Testing accuracy: 8.45%
+2023-04-11 13:47:47,139 - INFO - Local training..
+2023-04-11 13:47:49,405 - INFO - Sending new local model
+2023-04-11 13:47:49,406 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:47:49,407 - INFO - Sending local model
+2023-04-11 13:47:49,409 - INFO - Listening on port 6001
+2023-04-11 13:47:49,415 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:47:49,415 - INFO - I am client1
+2023-04-11 13:47:49,416 - INFO - Receiving new global model
+2023-04-11 13:47:49,525 - INFO - Training loss: 2.32600
+2023-04-11 13:47:49,528 - INFO - Testing accuracy: 6.36%
+2023-04-11 13:47:49,530 - INFO - Local training..
+2023-04-11 13:47:51,863 - INFO - Sending new local model
+2023-04-11 13:47:51,865 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:47:51,866 - INFO - Sending local model
+2023-04-11 13:47:51,868 - INFO - Listening on port 6001
+2023-04-11 13:47:51,879 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:47:51,879 - INFO - I am client1
+2023-04-11 13:47:51,880 - INFO - Receiving new global model
+2023-04-11 13:47:51,981 - INFO - Training loss: 1.14378
+2023-04-11 13:47:51,981 - INFO - Testing accuracy: 89.23%
+2023-04-11 13:47:51,982 - INFO - Local training..
+2023-04-11 13:47:54,163 - INFO - Sending new local model
+2023-04-11 13:47:54,164 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:47:54,165 - INFO - Sending local model
+2023-04-11 13:47:54,168 - INFO - Listening on port 6001
+2023-04-11 13:47:54,176 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:47:54,177 - INFO - I am client1
+2023-04-11 13:47:54,177 - INFO - Receiving new global model
+2023-04-11 13:47:54,287 - INFO - Training loss: 1.75992
+2023-04-11 13:47:54,287 - INFO - Testing accuracy: 65.75%
+2023-04-11 13:47:54,289 - INFO - Local training..
+2023-04-11 13:47:56,543 - INFO - Sending new local model
+2023-04-11 13:47:56,544 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:47:56,545 - INFO - Sending local model
+2023-04-11 13:47:56,548 - INFO - Listening on port 6001
+2023-04-11 13:47:56,554 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:47:56,554 - INFO - I am client1
+2023-04-11 13:47:56,554 - INFO - Receiving new global model
+2023-04-11 13:47:56,659 - INFO - Training loss: 2.15481
+2023-04-11 13:47:56,661 - INFO - Testing accuracy: 15.90%
+2023-04-11 13:47:56,662 - INFO - Local training..
+2023-04-11 13:47:59,099 - INFO - Sending new local model
+2023-04-11 13:47:59,100 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:47:59,101 - INFO - Sending local model
+2023-04-11 13:47:59,103 - INFO - Listening on port 6001
+2023-04-11 13:47:59,109 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:47:59,109 - INFO - I am client1
+2023-04-11 13:47:59,109 - INFO - Receiving new global model
+2023-04-11 13:47:59,333 - INFO - Training loss: 1.13074
+2023-04-11 13:47:59,336 - INFO - Testing accuracy: 90.75%
+2023-04-11 13:47:59,337 - INFO - Local training..
+2023-04-11 13:48:02,241 - INFO - Sending new local model
+2023-04-11 13:48:02,241 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:48:02,244 - INFO - Sending local model
+2023-04-11 13:48:02,247 - INFO - Listening on port 6001
+2023-04-11 13:48:02,252 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:48:02,253 - INFO - I am client1
+2023-04-11 13:48:02,253 - INFO - Receiving new global model
+2023-04-11 13:48:02,398 - INFO - Training loss: 0.98953
+2023-04-11 13:48:02,399 - INFO - Testing accuracy: 92.05%
+2023-04-11 13:48:02,400 - INFO - Local training..
+2023-04-11 13:48:05,404 - INFO - Sending new local model
+2023-04-11 13:48:05,408 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:48:05,413 - INFO - Sending local model
+2023-04-11 13:48:05,416 - INFO - Listening on port 6001
+2023-04-11 13:48:05,431 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:48:05,431 - INFO - I am client1
+2023-04-11 13:48:05,432 - INFO - Receiving new global model
+2023-04-11 13:48:05,538 - INFO - Training loss: 1.83900
+2023-04-11 13:48:05,540 - INFO - Testing accuracy: 49.42%
+2023-04-11 13:48:05,540 - INFO - Local training..
+2023-04-11 13:48:07,726 - INFO - Sending new local model
+2023-04-11 13:48:07,728 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:48:07,729 - INFO - Sending local model
+2023-04-11 13:48:07,731 - INFO - Listening on port 6001
+2023-04-11 13:48:07,736 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:48:07,736 - INFO - I am client1
+2023-04-11 13:48:07,737 - INFO - Receiving new global model
+2023-04-11 13:48:07,822 - INFO - Training loss: 1.08202
+2023-04-11 13:48:07,823 - INFO - Testing accuracy: 92.85%
+2023-04-11 13:48:07,823 - INFO - Local training..
+2023-04-11 13:48:10,091 - INFO - Sending new local model
+2023-04-11 13:48:10,093 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:48:10,094 - INFO - Sending local model
+2023-04-11 13:48:10,096 - INFO - Listening on port 6001
+2023-04-11 13:48:10,102 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:48:10,102 - INFO - I am client1
+2023-04-11 13:48:10,103 - INFO - Receiving new global model
+2023-04-11 13:48:10,189 - INFO - Training loss: 1.95067
+2023-04-11 13:48:10,189 - INFO - Testing accuracy: 49.86%
+2023-04-11 13:48:10,189 - INFO - Local training..
+2023-04-11 13:48:12,806 - INFO - Sending new local model
+2023-04-11 13:48:12,807 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:48:12,809 - INFO - Sending local model
+2023-04-11 13:48:12,812 - INFO - Listening on port 6001
+2023-04-11 13:48:12,820 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:48:12,820 - INFO - I am client1
+2023-04-11 13:48:12,820 - INFO - Receiving new global model
+2023-04-11 13:48:12,931 - INFO - Training loss: 2.19945
+2023-04-11 13:48:12,932 - INFO - Testing accuracy: 19.65%
+2023-04-11 13:48:12,933 - INFO - Local training..
+2023-04-11 13:48:15,162 - INFO - Sending new local model
+2023-04-11 13:48:15,167 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:48:15,168 - INFO - Sending local model
+2023-04-11 13:48:15,171 - INFO - Listening on port 6001
+2023-04-11 13:48:15,179 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:48:15,179 - INFO - I am client1
+2023-04-11 13:48:15,180 - INFO - Receiving new global model
+2023-04-11 13:48:15,412 - INFO - Training loss: 2.01482
+2023-04-11 13:48:15,412 - INFO - Testing accuracy: 27.96%
+2023-04-11 13:48:15,415 - INFO - Local training..
+2023-04-11 13:48:17,775 - INFO - Sending new local model
+2023-04-11 13:48:17,776 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:48:17,778 - INFO - Sending local model
+2023-04-11 13:48:17,781 - INFO - Listening on port 6001
+2023-04-11 13:48:17,787 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:48:17,788 - INFO - I am client1
+2023-04-11 13:48:17,788 - INFO - Receiving new global model
+2023-04-11 13:48:17,891 - INFO - Training loss: 0.97923
+2023-04-11 13:48:17,892 - INFO - Testing accuracy: 91.98%
+2023-04-11 13:48:17,894 - INFO - Local training..
+2023-04-11 13:48:20,193 - INFO - Sending new local model
+2023-04-11 13:48:20,194 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:48:20,196 - INFO - Sending local model
+2023-04-11 13:48:20,198 - INFO - Listening on port 6001
+2023-04-11 13:48:20,205 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:48:20,206 - INFO - I am client1
+2023-04-11 13:48:20,206 - INFO - Receiving new global model
+2023-04-11 13:48:20,330 - INFO - Training loss: 0.98719
+2023-04-11 13:48:20,333 - INFO - Testing accuracy: 95.09%
+2023-04-11 13:48:20,336 - INFO - Local training..
+2023-04-11 13:48:22,980 - INFO - Sending new local model
+2023-04-11 13:48:22,981 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:48:22,982 - INFO - Sending local model
+2023-04-11 13:48:22,984 - INFO - Listening on port 6001
+2023-04-11 13:48:22,990 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:48:22,990 - INFO - I am client1
+2023-04-11 13:48:22,991 - INFO - Receiving new global model
+2023-04-11 13:48:23,105 - INFO - Training loss: 1.85562
+2023-04-11 13:48:23,106 - INFO - Testing accuracy: 48.27%
+2023-04-11 13:48:23,107 - INFO - Local training..
+2023-04-11 13:48:25,281 - INFO - Sending new local model
+2023-04-11 13:48:25,285 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:48:25,286 - INFO - Sending local model
+2023-04-11 13:48:25,288 - INFO - Listening on port 6001
+2023-04-11 13:48:25,295 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:48:25,295 - INFO - I am client1
+2023-04-11 13:48:25,296 - INFO - Receiving new global model
+2023-04-11 13:48:25,396 - INFO - Training loss: 1.08785
+2023-04-11 13:48:25,398 - INFO - Testing accuracy: 95.01%
+2023-04-11 13:48:25,399 - INFO - Local training..
+2023-04-11 13:48:27,546 - INFO - Sending new local model
+2023-04-11 13:48:27,549 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:48:27,550 - INFO - Sending local model
+2023-04-11 13:48:27,551 - INFO - Listening on port 6001
+2023-04-11 13:48:27,557 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:48:27,557 - INFO - I am client1
+2023-04-11 13:48:27,558 - INFO - Receiving new global model
+2023-04-11 13:48:27,659 - INFO - Training loss: 1.75302
+2023-04-11 13:48:27,662 - INFO - Testing accuracy: 68.42%
+2023-04-11 13:48:27,662 - INFO - Local training..
+2023-04-11 13:48:29,888 - INFO - Sending new local model
+2023-04-11 13:48:29,889 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:48:29,890 - INFO - Sending local model
+2023-04-11 13:48:29,892 - INFO - Listening on port 6001
+2023-04-11 13:48:29,898 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:48:29,898 - INFO - I am client1
+2023-04-11 13:48:29,898 - INFO - Receiving new global model
+2023-04-11 13:48:30,167 - INFO - Training loss: 1.07958
+2023-04-11 13:48:30,169 - INFO - Testing accuracy: 92.05%
+2023-04-11 13:48:30,170 - INFO - Local training..
+2023-04-11 13:48:32,285 - INFO - Sending new local model
+2023-04-11 13:48:32,286 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:48:32,288 - INFO - Sending local model
+2023-04-11 13:48:32,289 - INFO - Listening on port 6001
+2023-04-11 13:48:32,296 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:48:32,296 - INFO - I am client1
+2023-04-11 13:48:32,296 - INFO - Receiving new global model
+2023-04-11 13:48:32,489 - INFO - Training loss: 0.98078
+2023-04-11 13:48:32,490 - INFO - Testing accuracy: 92.27%
+2023-04-11 13:48:32,491 - INFO - Local training..
+2023-04-11 13:48:34,709 - INFO - Sending new local model
+2023-04-11 13:48:34,710 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:48:34,711 - INFO - Sending local model
+2023-04-11 13:48:34,713 - INFO - Listening on port 6001
+2023-04-11 13:48:34,719 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:48:34,720 - INFO - I am client1
+2023-04-11 13:48:34,720 - INFO - Receiving new global model
+2023-04-11 13:48:34,841 - INFO - Training loss: 1.64784
+2023-04-11 13:48:34,843 - INFO - Testing accuracy: 68.42%
+2023-04-11 13:48:34,843 - INFO - Local training..
+2023-04-11 13:48:37,134 - INFO - Sending new local model
+2023-04-11 13:48:37,135 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:48:37,137 - INFO - Sending local model
+2023-04-11 13:48:37,139 - INFO - Listening on port 6001
+2023-04-11 13:48:37,145 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:48:37,146 - INFO - I am client1
+2023-04-11 13:48:37,146 - INFO - Receiving new global model
+2023-04-11 13:48:37,254 - INFO - Training loss: 1.07003
+2023-04-11 13:48:37,255 - INFO - Testing accuracy: 93.71%
+2023-04-11 13:48:37,256 - INFO - Local training..
+2023-04-11 13:48:39,525 - INFO - Sending new local model
+2023-04-11 13:48:39,526 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:48:39,527 - INFO - Sending local model
+2023-04-11 13:48:39,529 - INFO - Listening on port 6001
+2023-04-11 13:48:39,535 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:48:39,535 - INFO - I am client1
+2023-04-11 13:48:39,535 - INFO - Receiving new global model
+2023-04-11 13:48:39,619 - INFO - Training loss: 1.69281
+2023-04-11 13:48:39,620 - INFO - Testing accuracy: 61.85%
+2023-04-11 13:48:39,621 - INFO - Local training..
+2023-04-11 13:48:41,941 - INFO - Sending new local model
+2023-04-11 13:48:41,943 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:48:41,944 - INFO - Sending local model
+2023-04-11 13:48:41,946 - INFO - Listening on port 6001
+2023-04-11 13:48:41,951 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:48:41,952 - INFO - I am client1
+2023-04-11 13:48:41,952 - INFO - Receiving new global model
+2023-04-11 13:48:42,058 - INFO - Training loss: 0.95274
+2023-04-11 13:48:42,059 - INFO - Testing accuracy: 92.85%
+2023-04-11 13:48:42,061 - INFO - Local training..
+2023-04-11 13:48:44,343 - INFO - Sending new local model
+2023-04-11 13:48:44,344 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:48:44,346 - INFO - Sending local model
+2023-04-11 13:48:44,349 - INFO - Listening on port 6001
+2023-04-11 13:48:44,356 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:48:44,356 - INFO - I am client1
+2023-04-11 13:48:44,357 - INFO - Receiving new global model
+2023-04-11 13:48:44,579 - INFO - Training loss: 1.67302
+2023-04-11 13:48:44,579 - INFO - Testing accuracy: 60.69%
+2023-04-11 13:48:44,580 - INFO - Local training..
+2023-04-11 13:48:47,045 - INFO - Sending new local model
+2023-04-11 13:48:47,046 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:48:47,049 - INFO - Sending local model
+2023-04-11 13:48:47,052 - INFO - Listening on port 6001
+2023-04-11 13:48:47,058 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:48:47,059 - INFO - I am client1
+2023-04-11 13:48:47,059 - INFO - Receiving new global model
+2023-04-11 13:48:47,176 - INFO - Training loss: 1.91359
+2023-04-11 13:48:47,180 - INFO - Testing accuracy: 41.55%
+2023-04-11 13:48:47,185 - INFO - Local training..
+2023-04-11 13:48:49,491 - INFO - Sending new local model
+2023-04-11 13:48:49,491 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:48:49,493 - INFO - Sending local model
+2023-04-11 13:48:49,495 - INFO - Listening on port 6001
+2023-04-11 13:48:49,501 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:48:49,502 - INFO - I am client1
+2023-04-11 13:48:49,502 - INFO - Receiving new global model
+2023-04-11 13:48:49,595 - INFO - Training loss: 1.97146
+2023-04-11 13:48:49,597 - INFO - Testing accuracy: 40.10%
+2023-04-11 13:48:49,597 - INFO - Local training..
+2023-04-11 13:48:51,884 - INFO - Sending new local model
+2023-04-11 13:48:51,886 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:48:51,888 - INFO - Sending local model
+2023-04-11 13:48:51,893 - INFO - Listening on port 6001
+2023-04-11 13:48:51,900 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:48:51,901 - INFO - I am client1
+2023-04-11 13:48:51,902 - INFO - Receiving new global model
+2023-04-11 13:48:52,032 - INFO - Training loss: 1.10750
+2023-04-11 13:48:52,032 - INFO - Testing accuracy: 95.01%
+2023-04-11 13:48:52,037 - INFO - Local training..
+2023-04-11 13:48:55,084 - INFO - Sending new local model
+2023-04-11 13:48:55,084 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:48:55,087 - INFO - Sending local model
+2023-04-11 13:48:55,090 - INFO - Listening on port 6001
+2023-04-11 13:48:55,095 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:48:55,095 - INFO - I am client1
+2023-04-11 13:48:55,095 - INFO - Receiving new global model
+2023-04-11 13:48:55,243 - INFO - Training loss: 1.71243
+2023-04-11 13:48:55,245 - INFO - Testing accuracy: 62.21%
+2023-04-11 13:48:55,246 - INFO - Local training..
+2023-04-11 13:48:57,566 - INFO - Sending new local model
+2023-04-11 13:48:57,566 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:48:57,570 - INFO - Sending local model
+2023-04-11 13:48:57,573 - INFO - Listening on port 6001
+2023-04-11 13:48:57,580 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:48:57,580 - INFO - I am client1
+2023-04-11 13:48:57,581 - INFO - Receiving new global model
+2023-04-11 13:48:57,706 - INFO - Training loss: 1.07159
+2023-04-11 13:48:57,707 - INFO - Testing accuracy: 91.76%
+2023-04-11 13:48:57,707 - INFO - Local training..
+2023-04-11 13:49:00,294 - INFO - Sending new local model
+2023-04-11 13:49:00,298 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:49:00,300 - INFO - Sending local model
+2023-04-11 13:49:00,303 - INFO - Listening on port 6001
+2023-04-11 13:49:00,311 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:49:00,311 - INFO - I am client1
+2023-04-11 13:49:00,312 - INFO - Receiving new global model
+2023-04-11 13:49:00,566 - INFO - Training loss: 1.91365
+2023-04-11 13:49:00,567 - INFO - Testing accuracy: 52.46%
+2023-04-11 13:49:00,567 - INFO - Local training..
+2023-04-11 13:49:02,828 - INFO - Sending new local model
+2023-04-11 13:49:02,831 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:49:02,832 - INFO - Sending local model
+2023-04-11 13:49:02,834 - INFO - Listening on port 6001
+2023-04-11 13:49:02,840 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:49:02,840 - INFO - I am client1
+2023-04-11 13:49:02,841 - INFO - Receiving new global model
+2023-04-11 13:49:03,018 - INFO - Training loss: 2.21510
+2023-04-11 13:49:03,054 - INFO - Testing accuracy: 19.15%
+2023-04-11 13:49:03,092 - INFO - Local training..
+2023-04-11 13:49:05,320 - INFO - Sending new local model
+2023-04-11 13:49:05,321 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:49:05,322 - INFO - Sending local model
+2023-04-11 13:49:05,324 - INFO - Listening on port 6001
+2023-04-11 13:49:05,333 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:49:05,334 - INFO - I am client1
+2023-04-11 13:49:05,334 - INFO - Receiving new global model
+2023-04-11 13:49:05,444 - INFO - Training loss: 1.98956
+2023-04-11 13:49:05,444 - INFO - Testing accuracy: 29.34%
+2023-04-11 13:49:05,444 - INFO - Local training..
+2023-04-11 13:49:07,715 - INFO - Sending new local model
+2023-04-11 13:49:07,715 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:49:07,718 - INFO - Sending local model
+2023-04-11 13:49:07,720 - INFO - Listening on port 6001
+2023-04-11 13:49:07,726 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:49:07,727 - INFO - I am client1
+2023-04-11 13:49:07,727 - INFO - Receiving new global model
+2023-04-11 13:49:07,863 - INFO - Training loss: 1.10721
+2023-04-11 13:49:07,863 - INFO - Testing accuracy: 92.99%
+2023-04-11 13:49:07,863 - INFO - Local training..
+2023-04-11 13:49:10,429 - INFO - Sending new local model
+2023-04-11 13:49:10,433 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:49:10,434 - INFO - Sending local model
+2023-04-11 13:49:10,436 - INFO - Listening on port 6001
+2023-04-11 13:49:10,442 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:49:10,442 - INFO - I am client1
+2023-04-11 13:49:10,442 - INFO - Receiving new global model
+2023-04-11 13:49:10,556 - INFO - Training loss: 1.91484
+2023-04-11 13:49:10,558 - INFO - Testing accuracy: 43.28%
+2023-04-11 13:49:10,559 - INFO - Local training..
+2023-04-11 13:49:12,954 - INFO - Sending new local model
+2023-04-11 13:49:12,956 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:49:12,957 - INFO - Sending local model
+2023-04-11 13:49:12,959 - INFO - Listening on port 6001
+2023-04-11 13:49:12,965 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:49:12,965 - INFO - I am client1
+2023-04-11 13:49:12,966 - INFO - Receiving new global model
+2023-04-11 13:49:13,047 - INFO - Training loss: 2.17293
+2023-04-11 13:49:13,048 - INFO - Testing accuracy: 25.65%
+2023-04-11 13:49:13,050 - INFO - Local training..
+2023-04-11 13:49:15,442 - INFO - Sending new local model
+2023-04-11 13:49:15,443 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:49:15,444 - INFO - Sending local model
+2023-04-11 13:49:15,447 - INFO - Listening on port 6001
+2023-04-11 13:49:15,453 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:49:15,453 - INFO - I am client1
+2023-04-11 13:49:15,454 - INFO - Receiving new global model
+2023-04-11 13:49:15,690 - INFO - Training loss: 2.00700
+2023-04-11 13:49:15,692 - INFO - Testing accuracy: 28.40%
+2023-04-11 13:49:15,692 - INFO - Local training..
+2023-04-11 13:49:17,850 - INFO - Sending new local model
+2023-04-11 13:49:17,851 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:49:17,853 - INFO - Sending local model
+2023-04-11 13:49:17,855 - INFO - Listening on port 6001
+2023-04-11 13:49:17,861 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:49:17,861 - INFO - I am client1
+2023-04-11 13:49:17,862 - INFO - Receiving new global model
+2023-04-11 13:49:17,972 - INFO - Training loss: 1.10475
+2023-04-11 13:49:17,972 - INFO - Testing accuracy: 94.80%
+2023-04-11 13:49:17,974 - INFO - Local training..
+2023-04-11 13:49:20,129 - INFO - Sending new local model
+2023-04-11 13:49:20,131 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:49:20,132 - INFO - Sending local model
+2023-04-11 13:49:20,134 - INFO - Listening on port 6001
+2023-04-11 13:49:20,218 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:49:20,219 - INFO - I am client1
+2023-04-11 13:49:20,219 - INFO - Receiving new global model
+2023-04-11 13:49:20,312 - INFO - Training loss: 1.92598
+2023-04-11 13:49:20,312 - INFO - Testing accuracy: 43.93%
+2023-04-11 13:49:20,314 - INFO - Local training..
+2023-04-11 13:49:22,480 - INFO - Sending new local model
+2023-04-11 13:49:22,482 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:49:22,483 - INFO - Sending local model
+2023-04-11 13:49:22,484 - INFO - Listening on port 6001
+2023-04-11 13:49:22,492 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:49:22,492 - INFO - I am client1
+2023-04-11 13:49:22,492 - INFO - Receiving new global model
+2023-04-11 13:49:22,592 - INFO - Training loss: 1.09401
+2023-04-11 13:49:22,592 - INFO - Testing accuracy: 95.01%
+2023-04-11 13:49:22,592 - INFO - Local training..
+2023-04-11 13:49:24,846 - INFO - Sending new local model
+2023-04-11 13:49:24,848 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:49:24,848 - INFO - Sending local model
+2023-04-11 13:49:24,852 - INFO - Listening on port 6001
+2023-04-11 13:49:24,858 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:49:24,859 - INFO - I am client1
+2023-04-11 13:49:24,859 - INFO - Receiving new global model
+2023-04-11 13:49:24,950 - INFO - Training loss: 1.01074
+2023-04-11 13:49:24,951 - INFO - Testing accuracy: 94.36%
+2023-04-11 13:49:24,951 - INFO - Local training..
+2023-04-11 13:49:27,431 - INFO - Sending new local model
+2023-04-11 13:49:27,431 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:49:27,432 - INFO - Sending local model
+2023-04-11 13:49:27,434 - INFO - Listening on port 6001
+2023-04-11 13:49:27,440 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:49:27,441 - INFO - I am client1
+2023-04-11 13:49:27,441 - INFO - Receiving new global model
+2023-04-11 13:49:27,556 - INFO - Training loss: 0.96818
+2023-04-11 13:49:27,556 - INFO - Testing accuracy: 92.99%
+2023-04-11 13:49:27,557 - INFO - Local training..
+2023-04-11 13:49:30,169 - INFO - Sending new local model
+2023-04-11 13:49:30,173 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:49:30,174 - INFO - Sending local model
+2023-04-11 13:49:30,178 - INFO - Listening on port 6001
+2023-04-11 13:49:30,187 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:49:30,187 - INFO - I am client1
+2023-04-11 13:49:30,188 - INFO - Receiving new global model
+2023-04-11 13:49:30,467 - INFO - Training loss: 0.87324
+2023-04-11 13:49:30,467 - INFO - Testing accuracy: 93.93%
+2023-04-11 13:49:30,472 - INFO - Local training..
+2023-04-11 13:49:33,293 - INFO - Sending new local model
+2023-04-11 13:49:33,294 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:49:33,297 - INFO - Sending local model
+2023-04-11 13:49:33,299 - INFO - Listening on port 6001
+2023-04-11 13:49:33,308 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:49:33,309 - INFO - I am client1
+2023-04-11 13:49:33,309 - INFO - Receiving new global model
+2023-04-11 13:49:33,428 - INFO - Training loss: 1.80084
+2023-04-11 13:49:33,429 - INFO - Testing accuracy: 53.40%
+2023-04-11 13:49:33,430 - INFO - Local training..
+2023-04-11 13:49:36,393 - INFO - Sending new local model
+2023-04-11 13:49:36,395 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:49:36,395 - INFO - Sending local model
+2023-04-11 13:49:36,397 - INFO - Listening on port 6001
+2023-04-11 13:49:36,437 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:49:36,437 - INFO - I am client1
+2023-04-11 13:49:36,437 - INFO - Receiving new global model
+2023-04-11 13:49:36,530 - INFO - Training loss: 2.14984
+2023-04-11 13:49:36,532 - INFO - Testing accuracy: 21.97%
+2023-04-11 13:49:36,532 - INFO - Local training..
+2023-04-11 13:49:39,223 - INFO - Sending new local model
+2023-04-11 13:49:39,223 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:49:39,226 - INFO - Sending local model
+2023-04-11 13:49:39,228 - INFO - Listening on port 6001
+2023-04-11 13:49:39,233 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:49:39,233 - INFO - I am client1
+2023-04-11 13:49:39,234 - INFO - Receiving new global model
+2023-04-11 13:49:39,360 - INFO - Training loss: 1.10780
+2023-04-11 13:49:39,361 - INFO - Testing accuracy: 94.94%
+2023-04-11 13:49:39,363 - INFO - Local training..
+2023-04-11 13:49:41,347 - INFO - Sending new local model
+2023-04-11 13:49:41,351 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:49:41,352 - INFO - Sending local model
+2023-04-11 13:49:41,354 - INFO - Listening on port 6001
+2023-04-11 13:49:41,360 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:49:41,360 - INFO - I am client1
+2023-04-11 13:49:41,361 - INFO - Receiving new global model
+2023-04-11 13:49:41,473 - INFO - Training loss: 1.04378
+2023-04-11 13:49:41,475 - INFO - Testing accuracy: 95.45%
+2023-04-11 13:49:41,476 - INFO - Local training..
+2023-04-11 13:49:43,798 - INFO - Sending new local model
+2023-04-11 13:49:43,798 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:49:43,800 - INFO - Sending local model
+2023-04-11 13:49:43,802 - INFO - Listening on port 6001
+2023-04-11 13:49:43,808 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:49:43,808 - INFO - I am client1
+2023-04-11 13:49:43,808 - INFO - Receiving new global model
+2023-04-11 13:49:43,926 - INFO - Training loss: 1.68540
+2023-04-11 13:49:43,928 - INFO - Testing accuracy: 66.26%
+2023-04-11 13:49:43,929 - INFO - Local training..
+2023-04-11 13:49:47,240 - INFO - Sending new local model
+2023-04-11 13:49:47,243 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:49:47,245 - INFO - Sending local model
+2023-04-11 13:49:47,247 - INFO - Listening on port 6001
+2023-04-11 13:49:47,253 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:49:47,253 - INFO - I am client1
+2023-04-11 13:49:47,253 - INFO - Receiving new global model
+2023-04-11 13:49:47,408 - INFO - Training loss: 1.06745
+2023-04-11 13:49:47,409 - INFO - Testing accuracy: 91.91%
+2023-04-11 13:49:47,409 - INFO - Local training..
+2023-04-11 13:49:49,398 - INFO - Sending new local model
+2023-04-11 13:49:49,400 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:49:49,401 - INFO - Sending local model
+2023-04-11 13:49:49,401 - INFO - Listening on port 6001
+2023-04-11 13:49:49,409 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:49:49,409 - INFO - I am client1
+2023-04-11 13:49:49,409 - INFO - Receiving new global model
+2023-04-11 13:49:49,628 - INFO - Training loss: 1.03434
+2023-04-11 13:49:49,629 - INFO - Testing accuracy: 95.30%
+2023-04-11 13:49:49,629 - INFO - Local training..
+2023-04-11 13:49:51,584 - INFO - Sending new local model
+2023-04-11 13:49:51,585 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:49:51,586 - INFO - Sending local model
+2023-04-11 13:49:51,588 - INFO - Listening on port 6001
+2023-04-11 13:49:51,593 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:49:51,593 - INFO - I am client1
+2023-04-11 13:49:51,593 - INFO - Receiving new global model
+2023-04-11 13:49:51,720 - INFO - Training loss: 1.68163
+2023-04-11 13:49:51,724 - INFO - Testing accuracy: 66.33%
+2023-04-11 13:49:51,724 - INFO - Local training..
+2023-04-11 13:49:54,004 - INFO - Sending new local model
+2023-04-11 13:49:54,004 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:49:54,004 - INFO - Sending local model
+2023-04-11 13:49:54,010 - INFO - Listening on port 6001
+2023-04-11 13:49:54,054 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:49:54,054 - INFO - I am client1
+2023-04-11 13:49:54,054 - INFO - Receiving new global model
+2023-04-11 13:49:54,146 - INFO - Training loss: 1.89267
+2023-04-11 13:49:54,146 - INFO - Testing accuracy: 32.80%
+2023-04-11 13:49:54,146 - INFO - Local training..
+2023-04-11 13:49:56,262 - INFO - Sending new local model
+2023-04-11 13:49:56,262 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:49:56,262 - INFO - Sending local model
+2023-04-11 13:49:56,266 - INFO - Listening on port 6001
+2023-04-11 13:49:56,272 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:49:56,274 - INFO - I am client1
+2023-04-11 13:49:56,274 - INFO - Receiving new global model
+2023-04-11 13:49:56,405 - INFO - Training loss: 2.18525
+2023-04-11 13:49:56,427 - INFO - Testing accuracy: 12.93%
+2023-04-11 13:49:56,427 - INFO - Local training..
+2023-04-11 13:49:58,209 - INFO - Sending new local model
+2023-04-11 13:49:58,210 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:49:58,212 - INFO - Sending local model
+2023-04-11 13:49:58,214 - INFO - Listening on port 6001
+2023-04-11 13:49:58,220 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:49:58,220 - INFO - I am client1
+2023-04-11 13:49:58,220 - INFO - Receiving new global model
+2023-04-11 13:49:58,320 - INFO - Training loss: 1.99681
+2023-04-11 13:49:58,320 - INFO - Testing accuracy: 32.37%
+2023-04-11 13:49:58,320 - INFO - Local training..
+2023-04-11 13:50:00,056 - INFO - Sending new local model
+2023-04-11 13:50:00,057 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:50:00,058 - INFO - Sending local model
+2023-04-11 13:50:00,059 - INFO - Listening on port 6001
+2023-04-11 13:50:00,066 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:50:00,066 - INFO - I am client1
+2023-04-11 13:50:00,067 - INFO - Receiving new global model
+2023-04-11 13:50:00,158 - INFO - Training loss: 1.11120
+2023-04-11 13:50:00,160 - INFO - Testing accuracy: 91.47%
+2023-04-11 13:50:00,161 - INFO - Local training..
+2023-04-11 13:50:01,903 - INFO - Sending new local model
+2023-04-11 13:50:01,907 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:50:01,908 - INFO - Sending local model
+2023-04-11 13:50:01,911 - INFO - Listening on port 6001
+2023-04-11 13:50:01,913 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:50:01,913 - INFO - I am client1
+2023-04-11 13:50:01,917 - INFO - Receiving new global model
+2023-04-11 13:50:02,113 - INFO - Training loss: 1.00693
+2023-04-11 13:50:02,113 - INFO - Testing accuracy: 94.08%
+2023-04-11 13:50:02,117 - INFO - Local training..
+2023-04-11 13:50:03,826 - INFO - Sending new local model
+2023-04-11 13:50:03,827 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:50:03,828 - INFO - Sending local model
+2023-04-11 13:50:03,830 - INFO - Listening on port 6001
+2023-04-11 13:50:03,836 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:50:03,836 - INFO - I am client1
+2023-04-11 13:50:03,837 - INFO - Receiving new global model
+2023-04-11 13:50:03,939 - INFO - Training loss: 1.92640
+2023-04-11 13:50:03,939 - INFO - Testing accuracy: 52.89%
+2023-04-11 13:50:03,939 - INFO - Local training..
+2023-04-11 13:50:05,772 - INFO - Sending new local model
+2023-04-11 13:50:05,777 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:50:05,778 - INFO - Sending local model
+2023-04-11 13:50:05,779 - INFO - Listening on port 6001
+2023-04-11 13:50:05,806 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:50:05,806 - INFO - I am client1
+2023-04-11 13:50:05,806 - INFO - Receiving new global model
+2023-04-11 13:50:05,898 - INFO - Training loss: 2.19459
+2023-04-11 13:50:05,904 - INFO - Testing accuracy: 23.99%
+2023-04-11 13:50:05,907 - INFO - Local training..
+2023-04-11 13:50:07,643 - INFO - Sending new local model
+2023-04-11 13:50:07,643 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:50:07,645 - INFO - Sending local model
+2023-04-11 13:50:07,647 - INFO - Listening on port 6001
+2023-04-11 13:50:07,652 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:50:07,652 - INFO - I am client1
+2023-04-11 13:50:07,652 - INFO - Receiving new global model
+2023-04-11 13:50:07,782 - INFO - Training loss: 1.13612
+2023-04-11 13:50:07,783 - INFO - Testing accuracy: 90.03%
+2023-04-11 13:50:07,783 - INFO - Local training..
+2023-04-11 13:50:09,483 - INFO - Sending new local model
+2023-04-11 13:50:09,484 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:50:09,484 - INFO - Sending local model
+2023-04-11 13:50:09,484 - INFO - Listening on port 6001
+2023-04-11 13:50:09,494 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:50:09,494 - INFO - I am client1
+2023-04-11 13:50:09,494 - INFO - Receiving new global model
+2023-04-11 13:50:09,577 - INFO - Training loss: 1.04095
+2023-04-11 13:50:09,578 - INFO - Testing accuracy: 95.23%
+2023-04-11 13:50:09,578 - INFO - Local training..
+2023-04-11 13:50:11,317 - INFO - Sending new local model
+2023-04-11 13:50:11,317 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:50:11,321 - INFO - Sending local model
+2023-04-11 13:50:11,321 - INFO - Listening on port 6001
+2023-04-11 13:50:11,328 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:50:11,328 - INFO - I am client1
+2023-04-11 13:50:11,328 - INFO - Receiving new global model
+2023-04-11 13:50:11,440 - INFO - Training loss: 1.73994
+2023-04-11 13:50:11,440 - INFO - Testing accuracy: 70.52%
+2023-04-11 13:50:11,440 - INFO - Local training..
+2023-04-11 13:50:13,391 - INFO - Sending new local model
+2023-04-11 13:50:13,392 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:50:13,394 - INFO - Sending local model
+2023-04-11 13:50:13,396 - INFO - Listening on port 6001
+2023-04-11 13:50:13,404 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:50:13,404 - INFO - I am client1
+2023-04-11 13:50:13,405 - INFO - Receiving new global model
+2023-04-11 13:50:13,648 - INFO - Training loss: 1.09220
+2023-04-11 13:50:13,648 - INFO - Testing accuracy: 95.52%
+2023-04-11 13:50:13,648 - INFO - Local training..
+2023-04-11 13:50:15,456 - INFO - Sending new local model
+2023-04-11 13:50:15,456 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:50:15,459 - INFO - Sending local model
+2023-04-11 13:50:15,459 - INFO - Listening on port 6001
+2023-04-11 13:50:15,466 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:50:15,467 - INFO - I am client1
+2023-04-11 13:50:15,467 - INFO - Receiving new global model
+2023-04-11 13:50:15,569 - INFO - Training loss: 0.89421
+2023-04-11 13:50:15,569 - INFO - Testing accuracy: 93.79%
+2023-04-11 13:50:15,574 - INFO - Local training..
+2023-04-11 13:50:17,367 - INFO - Sending new local model
+2023-04-11 13:50:17,367 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:50:17,371 - INFO - Sending local model
+2023-04-11 13:50:17,371 - INFO - Listening on port 6001
+2023-04-11 13:50:17,408 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:50:17,408 - INFO - I am client1
+2023-04-11 13:50:17,408 - INFO - Receiving new global model
+2023-04-11 13:50:17,493 - INFO - Training loss: 1.61450
+2023-04-11 13:50:17,493 - INFO - Testing accuracy: 64.67%
+2023-04-11 13:50:17,497 - INFO - Local training..
+2023-04-11 13:50:19,247 - INFO - Sending new local model
+2023-04-11 13:50:19,251 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:50:19,253 - INFO - Sending local model
+2023-04-11 13:50:19,255 - INFO - Listening on port 6001
+2023-04-11 13:50:19,261 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:50:19,262 - INFO - I am client1
+2023-04-11 13:50:19,262 - INFO - Receiving new global model
+2023-04-11 13:50:19,412 - INFO - Training loss: 1.07694
+2023-04-11 13:50:19,446 - INFO - Testing accuracy: 95.38%
+2023-04-11 13:50:19,448 - INFO - Local training..
+2023-04-11 13:50:21,253 - INFO - Sending new local model
+2023-04-11 13:50:21,254 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:50:21,254 - INFO - Sending local model
+2023-04-11 13:50:21,259 - INFO - Listening on port 6001
+2023-04-11 13:50:21,264 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:50:21,265 - INFO - I am client1
+2023-04-11 13:50:21,265 - INFO - Receiving new global model
+2023-04-11 13:50:21,358 - INFO - Training loss: 1.04099
+2023-04-11 13:50:21,358 - INFO - Testing accuracy: 95.52%
+2023-04-11 13:50:21,362 - INFO - Local training..
+2023-04-11 13:50:23,242 - INFO - Sending new local model
+2023-04-11 13:50:23,243 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:50:23,243 - INFO - Sending local model
+2023-04-11 13:50:23,243 - INFO - Listening on port 6001
+2023-04-11 13:50:23,252 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:50:23,253 - INFO - I am client1
+2023-04-11 13:50:23,253 - INFO - Receiving new global model
+2023-04-11 13:50:23,372 - INFO - Training loss: 1.91648
+2023-04-11 13:50:23,373 - INFO - Testing accuracy: 53.11%
+2023-04-11 13:50:23,373 - INFO - Local training..
+2023-04-11 13:50:25,165 - INFO - Sending new local model
+2023-04-11 13:50:25,169 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:50:25,170 - INFO - Sending local model
+2023-04-11 13:50:25,173 - INFO - Listening on port 6001
+2023-04-11 13:50:25,177 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:50:25,178 - INFO - I am client1
+2023-04-11 13:50:25,178 - INFO - Receiving new global model
+2023-04-11 13:50:25,397 - INFO - Training loss: 2.19190
+2023-04-11 13:50:25,399 - INFO - Testing accuracy: 27.24%
+2023-04-11 13:50:25,400 - INFO - Local training..
+2023-04-11 13:50:28,358 - INFO - Sending new local model
+2023-04-11 13:50:28,362 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:50:28,362 - INFO - Sending local model
+2023-04-11 13:50:28,366 - INFO - Listening on port 6001
+2023-04-11 13:50:28,542 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:50:28,544 - INFO - I am client1
+2023-04-11 13:50:28,547 - INFO - Receiving new global model
+2023-04-11 13:50:28,700 - INFO - Training loss: 1.13555
+2023-04-11 13:50:28,700 - INFO - Testing accuracy: 90.10%
+2023-04-11 13:50:28,700 - INFO - Local training..
+2023-04-11 13:50:30,776 - INFO - Sending new local model
+2023-04-11 13:50:30,779 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:50:30,780 - INFO - Sending local model
+2023-04-11 13:50:30,782 - INFO - Listening on port 6001
+2023-04-11 13:50:30,912 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:50:30,912 - INFO - I am client1
+2023-04-11 13:50:30,912 - INFO - Receiving new global model
+2023-04-11 13:50:31,022 - INFO - Training loss: 1.91477
+2023-04-11 13:50:31,024 - INFO - Testing accuracy: 43.64%
+2023-04-11 13:50:31,027 - INFO - Local training..
+2023-04-11 13:50:34,584 - INFO - Sending new local model
+2023-04-11 13:50:34,586 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:50:34,587 - INFO - Sending local model
+2023-04-11 13:50:34,589 - INFO - Listening on port 6001
+2023-04-11 13:50:34,596 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:50:34,596 - INFO - I am client1
+2023-04-11 13:50:34,597 - INFO - Receiving new global model
+2023-04-11 13:50:34,710 - INFO - Training loss: 0.94928
+2023-04-11 13:50:34,712 - INFO - Testing accuracy: 92.56%
+2023-04-11 13:50:34,713 - INFO - Local training..
+2023-04-11 13:50:37,400 - INFO - Sending new local model
+2023-04-11 13:50:37,403 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:50:37,404 - INFO - Sending local model
+2023-04-11 13:50:37,406 - INFO - Listening on port 6001
+2023-04-11 13:50:37,413 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:50:37,413 - INFO - I am client1
+2023-04-11 13:50:37,414 - INFO - Receiving new global model
+2023-04-11 13:50:37,544 - INFO - Training loss: 1.86748
+2023-04-11 13:50:37,546 - INFO - Testing accuracy: 56.86%
+2023-04-11 13:50:37,547 - INFO - Local training..
+2023-04-11 13:50:40,498 - INFO - Sending new local model
+2023-04-11 13:50:40,500 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:50:40,502 - INFO - Sending local model
+2023-04-11 13:50:40,504 - INFO - Listening on port 6001
+2023-04-11 13:50:40,511 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:50:40,511 - INFO - I am client1
+2023-04-11 13:50:40,512 - INFO - Receiving new global model
+2023-04-11 13:50:40,610 - INFO - Training loss: 1.09615
+2023-04-11 13:50:40,614 - INFO - Testing accuracy: 95.16%
+2023-04-11 13:50:40,616 - INFO - Local training..
+2023-04-11 13:50:43,094 - INFO - Sending new local model
+2023-04-11 13:50:43,095 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:50:43,097 - INFO - Sending local model
+2023-04-11 13:50:43,138 - INFO - Listening on port 6001
+2023-04-11 13:50:43,197 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:50:43,197 - INFO - I am client1
+2023-04-11 13:50:43,197 - INFO - Receiving new global model
+2023-04-11 13:50:43,450 - INFO - Training loss: 0.98833
+2023-04-11 13:50:43,454 - INFO - Testing accuracy: 92.92%
+2023-04-11 13:50:43,454 - INFO - Local training..
+2023-04-11 13:50:45,672 - INFO - Sending new local model
+2023-04-11 13:50:45,673 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:50:45,674 - INFO - Sending local model
+2023-04-11 13:50:45,677 - INFO - Listening on port 6001
+2023-04-11 13:50:45,683 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:50:45,683 - INFO - I am client1
+2023-04-11 13:50:45,684 - INFO - Receiving new global model
+2023-04-11 13:50:45,776 - INFO - Training loss: 1.62110
+2023-04-11 13:50:45,778 - INFO - Testing accuracy: 69.29%
+2023-04-11 13:50:45,780 - INFO - Local training..
+2023-04-11 13:50:48,006 - INFO - Sending new local model
+2023-04-11 13:50:48,008 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:50:48,009 - INFO - Sending local model
+2023-04-11 13:50:48,012 - INFO - Listening on port 6001
+2023-04-11 13:50:48,018 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:50:48,019 - INFO - I am client1
+2023-04-11 13:50:48,019 - INFO - Receiving new global model
+2023-04-11 13:50:48,115 - INFO - Training loss: 1.86735
+2023-04-11 13:50:48,116 - INFO - Testing accuracy: 35.69%
+2023-04-11 13:50:48,117 - INFO - Local training..
+2023-04-11 13:50:50,286 - INFO - Sending new local model
+2023-04-11 13:50:50,287 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:50:50,288 - INFO - Sending local model
+2023-04-11 13:50:50,290 - INFO - Listening on port 6001
+2023-04-11 13:50:50,322 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:50:50,322 - INFO - I am client1
+2023-04-11 13:50:50,322 - INFO - Receiving new global model
+2023-04-11 13:50:50,429 - INFO - Training loss: 1.95526
+2023-04-11 13:50:50,429 - INFO - Testing accuracy: 30.27%
+2023-04-11 13:50:50,434 - INFO - Local training..
+2023-04-11 13:50:52,808 - INFO - Sending new local model
+2023-04-11 13:50:52,810 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:50:52,812 - INFO - Sending local model
+2023-04-11 13:50:52,817 - INFO - Listening on port 6001
+2023-04-11 13:50:52,829 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:50:52,829 - INFO - I am client1
+2023-04-11 13:50:52,830 - INFO - Receiving new global model
+2023-04-11 13:50:52,995 - INFO - Training loss: 2.19339
+2023-04-11 13:50:53,000 - INFO - Testing accuracy: 11.05%
+2023-04-11 13:50:53,000 - INFO - Local training..
+2023-04-11 13:50:55,986 - INFO - Sending new local model
+2023-04-11 13:50:55,987 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:50:55,988 - INFO - Sending local model
+2023-04-11 13:50:55,990 - INFO - Listening on port 6001
+2023-04-11 13:50:55,995 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:50:55,996 - INFO - I am client1
+2023-04-11 13:50:55,996 - INFO - Receiving new global model
+2023-04-11 13:50:56,165 - INFO - Training loss: 1.99877
+2023-04-11 13:50:56,166 - INFO - Testing accuracy: 32.66%
+2023-04-11 13:50:56,167 - INFO - Local training..
+2023-04-11 13:50:58,422 - INFO - Sending new local model
+2023-04-11 13:50:58,423 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:50:58,425 - INFO - Sending local model
+2023-04-11 13:50:58,426 - INFO - Listening on port 6001
+2023-04-11 13:50:58,432 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:50:58,432 - INFO - I am client1
+2023-04-11 13:50:58,433 - INFO - Receiving new global model
+2023-04-11 13:50:58,674 - INFO - Training loss: 1.11145
+2023-04-11 13:50:58,674 - INFO - Testing accuracy: 91.55%
+2023-04-11 13:50:58,675 - INFO - Local training..
+2023-04-11 13:51:01,022 - INFO - Sending new local model
+2023-04-11 13:51:01,024 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:51:01,025 - INFO - Sending local model
+2023-04-11 13:51:01,028 - INFO - Listening on port 6001
+2023-04-11 13:51:01,035 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:51:01,036 - INFO - I am client1
+2023-04-11 13:51:01,037 - INFO - Receiving new global model
+2023-04-11 13:51:01,144 - INFO - Training loss: 1.91165
+2023-04-11 13:51:01,145 - INFO - Testing accuracy: 44.51%
+2023-04-11 13:51:01,146 - INFO - Local training..
+2023-04-11 13:51:03,496 - INFO - Sending new local model
+2023-04-11 13:51:03,497 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:51:03,498 - INFO - Sending local model
+2023-04-11 13:51:03,502 - INFO - Listening on port 6001
+2023-04-11 13:51:03,511 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:51:03,511 - INFO - I am client1
+2023-04-11 13:51:03,512 - INFO - Receiving new global model
+2023-04-11 13:51:03,638 - INFO - Training loss: 2.17134
+2023-04-11 13:51:03,642 - INFO - Testing accuracy: 21.53%
+2023-04-11 13:51:03,642 - INFO - Local training..
+2023-04-11 13:51:05,833 - INFO - Sending new local model
+2023-04-11 13:51:05,833 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:51:05,837 - INFO - Sending local model
+2023-04-11 13:51:05,838 - INFO - Listening on port 6001
+2023-04-11 13:51:05,888 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:51:05,888 - INFO - I am client1
+2023-04-11 13:51:05,889 - INFO - Receiving new global model
+2023-04-11 13:51:06,072 - INFO - Training loss: 1.13011
+2023-04-11 13:51:06,073 - INFO - Testing accuracy: 93.06%
+2023-04-11 13:51:06,074 - INFO - Local training..
+2023-04-11 13:51:08,338 - INFO - Sending new local model
+2023-04-11 13:51:08,339 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:51:08,340 - INFO - Sending local model
+2023-04-11 13:51:08,344 - INFO - Listening on port 6001
+2023-04-11 13:51:08,352 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:51:08,353 - INFO - I am client1
+2023-04-11 13:51:08,353 - INFO - Receiving new global model
+2023-04-11 13:51:08,456 - INFO - Training loss: 1.92481
+2023-04-11 13:51:08,461 - INFO - Testing accuracy: 42.56%
+2023-04-11 13:51:08,462 - INFO - Local training..
+2023-04-11 13:51:11,211 - INFO - Sending new local model
+2023-04-11 13:51:11,211 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:51:11,216 - INFO - Sending local model
+2023-04-11 13:51:11,219 - INFO - Listening on port 6001
+2023-04-11 13:51:11,225 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:51:11,225 - INFO - I am client1
+2023-04-11 13:51:11,225 - INFO - Receiving new global model
+2023-04-11 13:51:11,367 - INFO - Training loss: 1.08994
+2023-04-11 13:51:11,368 - INFO - Testing accuracy: 90.10%
+2023-04-11 13:51:11,369 - INFO - Local training..
+2023-04-11 13:51:14,278 - INFO - Sending new local model
+2023-04-11 13:51:14,280 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:51:14,282 - INFO - Sending local model
+2023-04-11 13:51:14,285 - INFO - Listening on port 6001
+2023-04-11 13:51:14,293 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:51:14,293 - INFO - I am client1
+2023-04-11 13:51:14,294 - INFO - Receiving new global model
+2023-04-11 13:51:14,593 - INFO - Training loss: 0.88622
+2023-04-11 13:51:14,593 - INFO - Testing accuracy: 93.71%
+2023-04-11 13:51:14,598 - INFO - Local training..
+2023-04-11 13:51:17,049 - INFO - Sending new local model
+2023-04-11 13:51:17,050 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:51:17,051 - INFO - Sending local model
+2023-04-11 13:51:17,054 - INFO - Listening on port 6001
+2023-04-11 13:51:17,060 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:51:17,060 - INFO - I am client1
+2023-04-11 13:51:17,061 - INFO - Receiving new global model
+2023-04-11 13:51:17,177 - INFO - Training loss: 1.01751
+2023-04-11 13:51:17,180 - INFO - Testing accuracy: 95.59%
+2023-04-11 13:51:17,181 - INFO - Local training..
+2023-04-11 13:51:19,660 - INFO - Sending new local model
+2023-04-11 13:51:19,661 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:51:19,662 - INFO - Sending local model
+2023-04-11 13:51:19,664 - INFO - Listening on port 6001
+2023-04-11 13:51:19,670 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:51:19,671 - INFO - I am client1
+2023-04-11 13:51:19,671 - INFO - Receiving new global model
+2023-04-11 13:51:19,767 - INFO - Training loss: 0.97409
+2023-04-11 13:51:19,769 - INFO - Testing accuracy: 93.50%
+2023-04-11 13:51:19,769 - INFO - Local training..
+2023-04-11 13:51:21,931 - INFO - Sending new local model
+2023-04-11 13:51:21,932 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:51:21,934 - INFO - Sending local model
+2023-04-11 13:51:21,936 - INFO - Listening on port 6001
+2023-04-11 13:51:22,002 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:51:22,003 - INFO - I am client1
+2023-04-11 13:51:22,003 - INFO - Receiving new global model
+2023-04-11 13:51:22,105 - INFO - Training loss: 1.02490
+2023-04-11 13:51:22,107 - INFO - Testing accuracy: 95.38%
+2023-04-11 13:51:22,108 - INFO - Local training..
+2023-04-11 13:51:24,327 - INFO - Sending new local model
+2023-04-11 13:51:24,327 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:51:24,329 - INFO - Sending local model
+2023-04-11 13:51:24,331 - INFO - Listening on port 6001
+2023-04-11 13:51:24,337 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:51:24,338 - INFO - I am client1
+2023-04-11 13:51:24,338 - INFO - Receiving new global model
+2023-04-11 13:51:24,452 - INFO - Training loss: 1.00009
+2023-04-11 13:51:24,456 - INFO - Testing accuracy: 94.58%
+2023-04-11 13:51:24,456 - INFO - Local training..
+2023-04-11 13:51:26,824 - INFO - Sending new local model
+2023-04-11 13:51:26,825 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:51:26,827 - INFO - Sending local model
+2023-04-11 13:51:26,829 - INFO - Listening on port 6001
+2023-04-11 13:51:26,837 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:51:26,838 - INFO - I am client1
+2023-04-11 13:51:26,839 - INFO - Receiving new global model
+2023-04-11 13:51:26,953 - INFO - Training loss: 0.96623
+2023-04-11 13:51:26,954 - INFO - Testing accuracy: 92.92%
+2023-04-11 13:51:26,956 - INFO - Local training..
+2023-04-11 13:51:29,164 - INFO - Sending new local model
+2023-04-11 13:51:29,166 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:51:29,167 - INFO - Sending local model
+2023-04-11 13:51:29,169 - INFO - Listening on port 6001
+2023-04-11 13:51:29,176 - DEBUG - Recieved data of type: pickle
+2023-04-11 13:51:29,176 - INFO - I am client1
+2023-04-11 13:51:29,177 - INFO - Receiving new global model
+2023-04-11 13:51:29,382 - INFO - Training loss: 0.95634
+2023-04-11 13:51:29,388 - INFO - Testing accuracy: 92.56%
+2023-04-11 13:51:29,389 - INFO - Local training..
+2023-04-11 13:51:31,831 - INFO - Sending new local model
+2023-04-11 13:51:31,832 - INFO - Trying to connect to server on port 6000
+2023-04-11 13:51:31,834 - INFO - Sending local model
+2023-04-11 13:51:31,837 - INFO - Listening on port 6001

@@ -28,7 +28,7 @@ INPUT_SIZE = 28*28
 NUM_CLASSES = 20
 
 BATCH_SIZE = 5
-LEARNING_RATE = 0.001
+LEARNING_RATE = 0.01
 
 stop_event = threading.Event()
 

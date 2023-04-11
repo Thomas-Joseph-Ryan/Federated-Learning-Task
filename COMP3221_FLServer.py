@@ -160,22 +160,22 @@ def main():
 
 
 # CREATE GRAPHS - UNCOMMENT IF YOU WOULD LIKE TO SEE THE GRAPH OUTPUT SAVED INTO THE DIRECTORY
-    plt.figure(1,figsize=(5, 5))
-    plt.plot(avg_loss_list, label="FedAvg", linewidth  = 1)
-    plt.legend(loc='best', prop={'size': 12}, ncol=2)
-    plt.ylabel('Training Loss')
-    plt.xlabel('Global rounds')
-    plt.title("Loss - Subsampling, mini-batch GD 5, 0.001 learning rate", fontsize=8, fontweight='bold')
-    plt.savefig('LP_s1_mGD5_l0.001.png', dpi=300)
+    # plt.figure(1,figsize=(5, 5))
+    # plt.plot(avg_loss_list, label="FedAvg", linewidth  = 1)
+    # plt.legend(loc='best', prop={'size': 12}, ncol=2)
+    # plt.ylabel('Training Loss')
+    # plt.xlabel('Global rounds')
+    # plt.title("Loss - Subsampling, mini-batch GD 5, 0.001 learning rate", fontsize=8, fontweight='bold')
+    # plt.savefig('LP_s1_mGD5_l0.001.png', dpi=300)
 
-    plt.figure(2,figsize=(5, 5))
-    plt.plot(avg_accuracy_list, label="FedAvg", linewidth  = 1)
-    plt.ylim([0,  100])
-    plt.legend(loc='best', prop={'size': 12}, ncol=2)
-    plt.ylabel('Testing Acc (%)')
-    plt.xlabel('Global rounds')
-    plt.title("Accuracy - Subsampling, mini-batch GD 5, 0.001 learning rate", fontsize=8, fontweight='bold')
-    plt.savefig('AC_s1_mGD5_l0.001.png', dpi=300)
+    # plt.figure(2,figsize=(5, 5))
+    # plt.plot(avg_accuracy_list, label="FedAvg", linewidth  = 1)
+    # plt.ylim([0,  100])
+    # plt.legend(loc='best', prop={'size': 12}, ncol=2)
+    # plt.ylabel('Testing Acc (%)')
+    # plt.xlabel('Global rounds')
+    # plt.title("Accuracy - Subsampling, mini-batch GD 5, 0.001 learning rate", fontsize=8, fontweight='bold')
+    # plt.savefig('AC_s1_mGD5_l0.001.png', dpi=300)
 
 def aggregate_models(client_models: list[tuple[MultinominalLogisticRegression, int]], 
                      global_model: MultinominalLogisticRegression,

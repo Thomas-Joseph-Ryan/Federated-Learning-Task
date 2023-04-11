@@ -21,8 +21,14 @@ SERVER_PORT = 6000
 HEADER_FORMAT = "{type}:{length}:{port}"
 HEADER_SIZE = 40  # Choose a fixed size for the header
 
+MODEL_INFO_FORMAT = "{accuracy:.5f}:{loss:.4f}"
+MODEL_INFO_SIZE = 20
+
 INPUT_SIZE = 28*28
-NUM_CLASSES = 10
+NUM_CLASSES = 20
+
+BATCH_SIZE = 5
+LEARNING_RATE = 0.001
 
 stop_event = threading.Event()
 
@@ -47,28 +53,46 @@ class UserAVG():
     def set_parameters(self, model):
         for old_param, new_param in zip(self.model.parameters(), model.parameters()):
             old_param.data = new_param.data.clone()
-            
-    def train(self, epochs):
-        LOSS = 0
-        self.model.train() # Tells the model that you are starting to train it
+    
+    def train(self, epochs, training_method=0):
+        self.model.train()  # Tells the model that you are starting to train it
+
         for epoch in range(1, epochs + 1):
-            self.model.train() # Only need this once 
-            for batch_idx, (X, y) in enumerate(self.trainloader):
-                self.optimizer.zero_grad() #Sets the gradients of all optimised code to zero
+            if training_method == 0:
+                self.optimizer.zero_grad()  # Sets the gradients of all optimized code to zero
+                X, y = self.X_train, self.y_train
                 output = self.model(X)
                 loss = self.loss(output, y)
                 loss.backward()
                 self.optimizer.step()
-        return loss.data #type: ignore
+            elif training_method == 1:
+                for batch_idx, (X, y) in enumerate(self.trainloader):
+                    self.optimizer.zero_grad()  # Sets the gradients of all optimized code to zero
+                    output = self.model(X)
+                    loss = self.loss(output, y)
+                    loss.backward()
+                    self.optimizer.step()
+            else:
+                raise ValueError("Invalid training method. Use 'gd' or 'minibatch_gd'.")
+
+        return loss.data  # type: ignore
+
+
     
     def test(self):
         self.model.eval()
         test_acc = 0
+        test_loss = 0
+        num_batches = 0
         for x, y in self.testloader:
             output = self.model(x)
             test_acc += (torch.sum(torch.argmax(output, dim=1) == y) * 1. / y.shape[0]).item()
-            print(str(self.id) + ", Accuracy of client ",self.id, " is: ", test_acc)
-        return test_acc
+            loss = self.loss(output, y)
+            test_loss += loss.item()
+            num_batches += 1
+
+        avg_test_loss = test_loss / num_batches
+        return test_acc, avg_test_loss
 
 def main():
     if len(sys.argv) != 4:
@@ -114,21 +138,29 @@ def main():
         if data_type == "string":
             if server_data == "end":
                 break
-        global_model = MultinominalLogisticRegression.deserialize(server_data, INPUT_SIZE, NUM_CLASSES)
-        # Create a UserAVG instance
+        logging.info(f"I am {client_id}")
+        print(f"I am {client_id}")
 
-        user = UserAVG(client_id, global_model, learning_rate=0.01, batch_size=32, x_train=X_train, y_train=y_train, x_test=X_test, y_test=y_test, train_samples=train_samples, test_samples=test_samples)
+        logging.info(f"Receiving new global model")
+        print("Receiving global model")
+        global_model = MultinominalLogisticRegression.deserialize(server_data, INPUT_SIZE, NUM_CLASSES)
+        user = UserAVG(client_id, global_model, learning_rate=LEARNING_RATE, batch_size=BATCH_SIZE, x_train=X_train, y_train=y_train, x_test=X_test, y_test=y_test, train_samples=train_samples, test_samples=test_samples)
+
+        global_model_accuracy, global_model_loss = user.test()
+        logging.info(f"Training loss: {global_model_loss:.5f}")
+        print(f"Training loss: {global_model_loss:.5f}")
+
+        logging.info(f"Testing accuracy: {global_model_accuracy*100:.2f}%")
+        print(f"Testing accuracy: {global_model_accuracy*100:.2f}%")
 
         # Train the client model
-        loss = user.train(epochs=10)
-        print(f"Training loss for client {client_id}: {loss}")
-
-        # Test the client model
-        test_accuracy = user.test()
-        print(f"Test accuracy for client {client_id}: {test_accuracy}")
-
+        logging.info("Local training..")
+        print("Local training..")
+        user.train(epochs=2, training_method=opt_method)
         # Send the local model back to the server
-        send_local_model(user.model, port_client)
+        logging.info("Sending new local model")
+        print("Sending new local model\n")
+        send_local_model(user.model, port_client, global_model_accuracy, global_model_loss)
 
 
     
@@ -152,7 +184,7 @@ def send_handshake(id: str, data_size: int, listening_port: int):
         except Exception as e:
             logging.error(f"Exception in broadcast: {e}")
 
-def send_local_model(model : MultinominalLogisticRegression, listening_port: int):
+def send_local_model(model : MultinominalLogisticRegression, listening_port: int, accuracy: float, loss: float):
         try:
             with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
                 logging.info(f"Trying to connect to server on port {SERVER_PORT}")
@@ -160,7 +192,8 @@ def send_local_model(model : MultinominalLogisticRegression, listening_port: int
                 logging.info(f"Sending local model")
                 encoded_data = base64.b64encode(model.serialize())
                 header = HEADER_FORMAT.format(type="pickle", length=len(encoded_data), port=listening_port).encode('utf-8').ljust(HEADER_SIZE)            
-                s.sendall(header + encoded_data)
+                model_info = MODEL_INFO_FORMAT.format(accuracy=accuracy, loss=loss).encode('utf-8').ljust(MODEL_INFO_SIZE)            
+                s.sendall(header + model_info + encoded_data)
         except ConnectionRefusedError:
             logging.error(f"Connection was refused by server on port {SERVER_PORT}")
         except Exception as e:
@@ -183,8 +216,6 @@ def listen(port: int):
                     check_stop_event()
                     continue
             with conn:
-                logging.info(f"Connected by {client_port}")
-
                 header = conn.recv(HEADER_SIZE).decode('utf-8').strip()
                 data_type, data_length, server_port = header.split(':')
                 data_length = int(data_length)
@@ -198,7 +229,7 @@ def listen(port: int):
                 else:
                     raise ValueError("Invalid data type")
                     
-                logging.debug(f"Recieved data: {decoded_data}")
+                logging.debug(f"Recieved data of type: {data_type}")
                 return (decoded_data, data_type)
     except Exception as e:
         logging.error(f"Exception in client listening: e")

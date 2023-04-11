@@ -10,12 +10,16 @@ import queue
 import time
 import random
 import base64
+import matplotlib
+import matplotlib.pyplot as plt
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s [%(levelname)s] %(message)s')
 
 stop_event = threading.Event()
 
-clients: dict[int, dict[str, str | int]] = {}
+
+# {<clientport> : {id : <client id>, data_size: <data_size>}}
+clients = {}
 
 inbound_information = queue.Queue()
 
@@ -23,6 +27,9 @@ SUB_CLIENT_NUMBER = 2
 
 HEADER_FORMAT = "{type}:{length}:{port}"
 HEADER_SIZE = 40  # Choose a fixed size for the header
+
+MODEL_INFO_FORMAT = "{accuracy}:{loss}"
+MODEL_INFO_SIZE = 20
 
 SERVER_PORT = 6000
 
@@ -107,18 +114,22 @@ def main():
 
     iteration = 1
     iteration_data = []
+    avg_accuracy_list = []
+    avg_loss_list = []
     broadcast_model(global_model)
     while iteration <= 100:
         print(f"Global Iteration {iteration}:")
         num_clients = len(clients)
         print(f"Total Number of clients: {num_clients}")
+        total_acc = 0
+        total_loss = 0
         while True:
             try:
                 inbound_info = inbound_information.get(block=True, timeout=0.5)
             except queue.Empty:
                 check_stop_event()
                 continue
-            message, client_port, data_type = inbound_info[0], inbound_info[1], inbound_info[2]
+            message, client_port, data_type, accuracy, loss = inbound_info[0], inbound_info[1], inbound_info[2], inbound_info[3], inbound_info[4]
             if data_type == "string":
                 if message.split(" ")[0] == "hello":
                     add_client(message, client_port)
@@ -128,60 +139,83 @@ def main():
                 print(f"Getting local model from {client_id}")
                 local_model = MultinominalLogisticRegression.deserialize(message, input_size, num_classes)
                 iteration_data.append((local_model, client_port))
+                total_acc += accuracy
+                total_loss += loss
             
             if inbound_information.qsize() == 0 and len(iteration_data) == num_clients:
                 break
         print("Aggregating new global model")
         global_model = aggregate_models(iteration_data, global_model, sub_client)
-        print("Broadcasting new global model\n")
+        print("Broadcasting new global model")
         broadcast_model(global_model)
+        avg_acc = (total_acc / num_clients) * 100
+        avg_loss = total_loss / num_clients
+        print(f"Average accuracy: {avg_acc:.2f}%, Average loss: {avg_loss:.5f}\n")
+        avg_accuracy_list.append(avg_acc)
+        avg_loss_list.append(avg_loss)
+        iteration += 1
+        iteration_data = []
     broadcast_end()
-        
+    stop_event.set()
+
+
+# CREATE GRAPHS - UNCOMMENT IF YOU WOULD LIKE TO SEE THE GRAPH OUTPUT SAVED INTO THE DIRECTORY
+    plt.figure(1,figsize=(5, 5))
+    plt.plot(avg_loss_list, label="FedAvg", linewidth  = 1)
+    plt.legend(loc='best', prop={'size': 12}, ncol=2)
+    plt.ylabel('Training Loss')
+    plt.xlabel('Global rounds')
+    plt.title("Loss - Subsampling, mini-batch GD 5, 0.001 learning rate", fontsize=8, fontweight='bold')
+    plt.savefig('LP_s1_mGD5_l0.001.png', dpi=300)
+
+    plt.figure(2,figsize=(5, 5))
+    plt.plot(avg_accuracy_list, label="FedAvg", linewidth  = 1)
+    plt.ylim([0,  100])
+    plt.legend(loc='best', prop={'size': 12}, ncol=2)
+    plt.ylabel('Testing Acc (%)')
+    plt.xlabel('Global rounds')
+    plt.title("Accuracy - Subsampling, mini-batch GD 5, 0.001 learning rate", fontsize=8, fontweight='bold')
+    plt.savefig('AC_s1_mGD5_l0.001.png', dpi=300)
+
 def aggregate_models(client_models: list[tuple[MultinominalLogisticRegression, int]], 
                      global_model: MultinominalLogisticRegression,
                      sub_client: int) -> MultinominalLogisticRegression:
+    
+    total_data_size = 0
+    for model in client_models:
+        client_port = model[1]
+        data_size = clients[client_port].get("data_size")
+        total_data_size += data_size
+    
     if sub_client == 0 or len(client_models) < SUB_CLIENT_NUMBER:
         num_clients = len(client_models)
 
-        # Initialize the aggregated weights and biases to zero
-        aggregated_weights = torch.zeros_like(client_models[0][0].linear.weight)
-        aggregated_biases = torch.zeros_like(client_models[0][0].linear.bias)
-
-        # Sum the weights and biases from all client models
-        for model in client_models:
-            aggregated_weights += model[0].linear.weight
-            aggregated_biases += model[0].linear.bias
-
-        # Calculate the average of the weights and biases
-        aggregated_weights /= num_clients
-        aggregated_biases /= num_clients
-
-        # Update the global model with the averaged weights and biases
-        global_model.linear.weight.data = aggregated_weights
-        global_model.linear.bias.data = aggregated_biases
+        # Update the global model with the aggregated parameters
+        for global_param in global_model.parameters():
+            global_param.data = torch.zeros_like(global_param.data)
+            for model in client_models:
+                client_weight_proportion = clients[model[1]].get("data_size") / total_data_size #Client data size over total data size
+                for client_param in model[0].parameters():
+                    if global_param.shape == client_param.shape:
+                        global_param.data += client_param.data * client_weight_proportion
 
     elif sub_client == 1 and len(client_models) >= SUB_CLIENT_NUMBER:
         num_clients = SUB_CLIENT_NUMBER
 
-        # Initialize the aggregated weights and biases to zero
-        aggregated_weights = torch.zeros_like(client_models[0][0].linear.weight)
-        aggregated_biases = torch.zeros_like(client_models[0][0].linear.bias)
-
         # Choose 2 client models at random
         selected_client_models = random.sample(client_models, num_clients)
-        # Sum the weights and biases from all client models
-        for model in selected_client_models:
-            aggregated_weights += model[0].linear.weight
-            aggregated_biases += model[0].linear.bias
 
-        # Calculate the average of the weights and biases
-        aggregated_weights /= num_clients
-        aggregated_biases /= num_clients
+        # Update the global model with the aggregated parameters
+        for global_param in global_model.parameters():
+            global_param.data = torch.zeros_like(global_param.data)
+            for model in selected_client_models:
+                client_weight_proportion = clients[model[1]].get("data_size") / total_data_size #Client data size over total data size
+                for client_param in model[0].parameters():
+                    if global_param.shape == client_param.shape:
+                        global_param.data += client_param.data * client_weight_proportion
 
-        # Update the global model with the averaged weights and biases
-        global_model.linear.weight.data = aggregated_weights
-        global_model.linear.bias.data = aggregated_biases
     return global_model
+
 
 def thread_listen(port: int):
     try:
@@ -215,10 +249,17 @@ def thread_listen(port: int):
                         continue
 
                     try:
-                        encoded_data = conn.recv(data_length)
                         if data_type == "pickle":
+                            model_info = conn.recv(MODEL_INFO_SIZE).decode('utf-8').strip()
+                            logging.debug(f"Model Info: {model_info}")
+                            accuracy, loss = model_info.split(":")
+                            accuracy = float(accuracy)
+                            loss = float(loss)
+                            encoded_data = conn.recv(data_length)
                             decoded_data = base64.b64decode(encoded_data)
                         elif data_type == "string":
+                            accuracy, loss = None, None
+                            encoded_data = conn.recv(data_length)
                             decoded_data = encoded_data.decode('utf-8')
                         else:
                             raise ValueError("Invalid data type")
@@ -226,8 +267,8 @@ def thread_listen(port: int):
                         logging.error(f"Exception while processing data: {e}")
                         continue
                         
-                    logging.debug(f"Recieved data: {decoded_data}")
-                    inbound_information.put((decoded_data, client_port, data_type))
+                    logging.debug(f"Recieved data type: {data_type}")
+                    inbound_information.put((decoded_data, client_port, data_type, accuracy, loss))
     except Exception as e:
         logging.error(f"Exception in server listening: {e}")
 

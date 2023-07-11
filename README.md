@@ -1,7 +1,8 @@
 # Federated learning Task
 
 I have not uploaded the FLdata in the submission to reduce package size, please insert the directory 
-FLdata from the assignment spec into the same directory of the program.
+FLdata from the assignment spec into the same directory of the program or download the MNIST training data
+externally (possible link -> https://www.kaggle.com/datasets/hojjatk/mnist-dataset).
 
 In order to run the program, use the commands outlined in the spec.
 
